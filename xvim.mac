@@ -1,0 +1,3 @@
+#!/bin/bash
+
+~/bin/xvim_aux.scpt `pwd` $1

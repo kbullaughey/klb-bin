@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "x$1" = "x" ] ; then
+   echo "must specify file"
+   exit 1
+fi
+
+if [ -f $1 ] ; then
+   echo "file already exists"
+   exit 1
+fi
+
+touch $1 && svn add $1 && xvim $1 || echo "failed"

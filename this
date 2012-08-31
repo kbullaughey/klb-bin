@@ -1,0 +1,14 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my $path = `pwd`;
+chomp $path;
+
+if (scalar(@ARGV) > 0) {
+   foreach my $i (@ARGV) {
+      print "$path/$i\n";
+   }
+} else {
+   print "$path\n";
+}

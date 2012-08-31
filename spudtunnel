@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh spud -Nf -L 33289:spudhead:22

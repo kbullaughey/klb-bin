@@ -1,0 +1,9 @@
+#!/bin/bash
+
+scp $1 .
+file=`echo $1 | sed 's/^.*\/\([^\/]*\)$/\1/'`
+if [ `echo $file | grep -c '\.pdf\.gz'` == "1" ] ; then
+   gunzip -f $file
+   file=`echo $file | sed 's/\.gz//'`
+fi
+open -a preview $file

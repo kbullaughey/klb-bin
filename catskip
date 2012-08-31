@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+if (scalar(@ARGV) != 1) {
+   print STDERR "must specify number of lines to skip\n";
+   exit(-1);
+}
+
+my $toskip = shift(@ARGV);
+
+for (my $i = 0; $i < $toskip; $i++) {
+   <STDIN>;
+}
+
+while (my $line = <STDIN>) {
+   print $line;
+}
