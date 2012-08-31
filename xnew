@@ -10,4 +10,4 @@ if [ -f $1 ] ; then
    exit 1
 fi
 
-touch $1 && svn add $1 && xvim $1 || echo "failed"
+touch $1 && svn add $1 && vim $1 || echo "failed"

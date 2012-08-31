@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "x" = "x$1" ] ; then
+  echo "must specify parameter" >&2
+  exit 1
+fi
+fn=$1
+
+touch $fn
+git add $fn
+vim $fn
